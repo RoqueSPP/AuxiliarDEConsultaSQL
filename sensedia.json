@@ -1,0 +1,502 @@
+{
+	"info": {
+		"_postman_id": "6ca17097-adf4-49b8-bb72-c0388b133897",
+		"name": "sensedia",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25218172"
+	},
+	"item": [
+		{
+			"name": "Create Board",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"var idBoard =  JSON.parse(responseBody);\r",
+							"console.log(idBoard.id);\r",
+							"pm.environment.set(\"idBoard\", idBoard.id);"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "oauth1",
+					"oauth1": [
+						{
+							"key": "tokenSecret",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "signatureMethod",
+							"value": "HMAC-SHA1",
+							"type": "string"
+						},
+						{
+							"key": "consumerSecret",
+							"value": "{{costumer}}",
+							"type": "string"
+						},
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						},
+						{
+							"key": "consumerKey",
+							"value": "{{key}}",
+							"type": "string"
+						},
+						{
+							"key": "version",
+							"value": "1.0",
+							"type": "string"
+						},
+						{
+							"key": "addParamsToHeader",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "addEmptyParamsToSign",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"teste 01\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{uri}}boards/",
+					"host": [
+						"{{uri}}boards"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create List",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"var idList =  JSON.parse(responseBody);\r",
+							"console.log(idList.id);\r",
+							"pm.environment.set(\"idList\",idList.id);"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "oauth1",
+					"oauth1": [
+						{
+							"key": "consumerSecret",
+							"value": "{{costumer}}",
+							"type": "string"
+						},
+						{
+							"key": "tokenSecret",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "signatureMethod",
+							"value": "HMAC-SHA1",
+							"type": "string"
+						},
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						},
+						{
+							"key": "consumerKey",
+							"value": "{{key}}",
+							"type": "string"
+						},
+						{
+							"key": "version",
+							"value": "1.0",
+							"type": "string"
+						},
+						{
+							"key": "addParamsToHeader",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "addEmptyParamsToSign",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"teste 01\",\r\n    \"idBoard\": \"{{idBoard}}\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{uri}}lists",
+					"host": [
+						"{{uri}}lists"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Card",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"var idCard =  JSON.parse(responseBody);\r",
+							"console.log(idCard.id);\r",
+							"pm.environment.set(\"idCard\",idCard.id);"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "oauth1",
+					"oauth1": [
+						{
+							"key": "consumerSecret",
+							"value": "{{costumer}}",
+							"type": "string"
+						},
+						{
+							"key": "tokenSecret",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "signatureMethod",
+							"value": "HMAC-SHA1",
+							"type": "string"
+						},
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						},
+						{
+							"key": "consumerKey",
+							"value": "{{key}}",
+							"type": "string"
+						},
+						{
+							"key": "version",
+							"value": "1.0",
+							"type": "string"
+						},
+						{
+							"key": "addParamsToHeader",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "addEmptyParamsToSign",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"teste 01\",\r\n    \"idList\": \"{{idList}}\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{uri}}cards",
+					"host": [
+						"{{uri}}cards"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Card",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"var idCard =  JSON.parse(responseBody);\r",
+							"console.log(idCard.id);\r",
+							"pm.environment.set(\"idList\",idCard.id);"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "oauth1",
+					"oauth1": [
+						{
+							"key": "consumerSecret",
+							"value": "{{costumer}}",
+							"type": "string"
+						},
+						{
+							"key": "tokenSecret",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "signatureMethod",
+							"value": "HMAC-SHA1",
+							"type": "string"
+						},
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						},
+						{
+							"key": "consumerKey",
+							"value": "{{key}}",
+							"type": "string"
+						},
+						{
+							"key": "version",
+							"value": "1.0",
+							"type": "string"
+						},
+						{
+							"key": "addParamsToHeader",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "addEmptyParamsToSign",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"locationName\": \"Desafio API\",\r\n  \"manualCoverAttachment\": false,\r\n  \"name\": \"👋 What? Why? How?\",\r\n  \"pos\": 65535,\r\n  \"shortLink\": \"H0TZyzbK\",\r\n  \"shortUrl\": \"https://trello.com/c/H0TZyzbK\",\r\n  \"subscribed\": false,\r\n  \"url\": \"https://trello.com/c/H0TZyzbK/4-%F0%9F%91%8B-what-why-how\",\r\n  \"cover\": {\r\n    \"color\": \"yellow\",\r\n    \"idUploadedBackground\": false,\r\n    \"size\": \"normal\",\r\n    \"brightness\": \"light\",\r\n    \"isTemplate\": false\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{uri}}cards/{{idCard}}",
+					"host": [
+						"{{uri}}cards"
+					],
+					"path": [
+						"{{idCard}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delite Board",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "oauth1",
+					"oauth1": [
+						{
+							"key": "tokenSecret",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "signatureMethod",
+							"value": "HMAC-SHA1",
+							"type": "string"
+						},
+						{
+							"key": "consumerSecret",
+							"value": "{{costumer}}",
+							"type": "string"
+						},
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						},
+						{
+							"key": "consumerKey",
+							"value": "{{key}}",
+							"type": "string"
+						},
+						{
+							"key": "version",
+							"value": "1.0",
+							"type": "string"
+						},
+						{
+							"key": "addParamsToHeader",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "addEmptyParamsToSign",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{uri}}boards/{{idBoard}}",
+					"host": [
+						"{{uri}}boards"
+					],
+					"path": [
+						"{{idBoard}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
