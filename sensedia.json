@@ -383,7 +383,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n\"locationName\": \"Desafio API\",\r\n  \"manualCoverAttachment\": false,\r\n  \"name\": \"👋 What? Why? How?\",\r\n  \"pos\": 65535,\r\n  \"shortLink\": \"H0TZyzbK\",\r\n  \"shortUrl\": \"https://trello.com/c/H0TZyzbK\",\r\n  \"subscribed\": false,\r\n  \"url\": \"https://trello.com/c/H0TZyzbK/4-%F0%9F%91%8B-what-why-how\",\r\n  \"cover\": {\r\n    \"color\": \"yellow\",\r\n    \"idUploadedBackground\": false,\r\n    \"size\": \"normal\",\r\n    \"brightness\": \"light\",\r\n    \"isTemplate\": false\r\n  }\r\n}",
+					"raw": "{\r\n\"locationName\": \"Desafio API\",\r\n  \"manualCoverAttachment\": false,\r\n  \"name\": \"👋 O que? Quem? Como?\",\r\n  \"pos\": 65535,\r\n  \"shortLink\": \"H0TZyzbK\",\r\n  \"shortUrl\": \"https://trello.com/c/H0TZyzbK\",\r\n  \"subscribed\": false,\r\n  \"url\": \"https://trello.com/c/H0TZyzbK/4-%F0%9F%91%8B-what-why-how\",\r\n  \"cover\": {\r\n    \"color\": \"yellow\",\r\n    \"idUploadedBackground\": false,\r\n    \"size\": \"normal\",\r\n    \"brightness\": \"light\",\r\n    \"isTemplate\": false\r\n  }\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
