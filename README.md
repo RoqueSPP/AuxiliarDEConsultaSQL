@@ -1,1 +1,1 @@
-# SensediaPostman
+# Auxiliar de consulta SQL
